@@ -1039,3 +1039,116 @@ opacity: 0;
     }
 }
 /* End events */
+/* Start pricing */
+.pricing{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+    position: relative; 
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pricing .box{
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    text-align: center;
+    position: relative;
+    transition: var(--main-transition);
+    z-index: 1;
+}
+.pricing .box::before,
+.pricing .box::after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 0;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.pricing .box::before{
+    top: 0;
+    left: 0;
+}
+.pricing .box::after{
+    bottom: 0;
+    right: 0;
+}
+.pricing .box:hover::before,
+.pricing .box:hover::after{
+    width: 100%;
+}
+@media (min-width: 1200px){
+    .pricing .popular{
+        top: -20px;
+    }
+}
+.pricing .box.popular .label{
+    position: absolute;
+    writing-mode: vertical-lr;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 10px 35px;
+    font-weight: bold;
+    right: 20px;
+    font-size: 18px;
+    width: 40px;
+}
+.pricing .box.popular .label::before{
+    content: "";
+    border: 20px solid;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-color: transparent transparent white transparent;
+}
+.pricing .box .title{
+    font-size: 25px;
+}
+.pricing .box img{
+width: 80px;
+margin-bottom: 30px;
+}
+.pricing .box .price .amount{
+    display: block;
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 60px;
+}
+.pricing .box .price .time{
+    display: block;
+    color: #777;
+    margin: 10px
+}
+.pricing .box ul{
+    text-align: left;
+}
+.pricing .box ul li{
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+.pricing .container .box ul li::before {
+    font-family: "Font Awesome\ 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    color: var(--main-color);
+    margin-right: 10px;
+}
+.pricing .box a{
+    margin: 40px auto;
+    display: block;
+    border: 2px solid var(--main-color);
+    width: fit-content;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--main-color-alt);
+}
+.pricing .box a:hover{
+    color: white;
+    background-color: var(--main-color);
+}
+/* End pricing */
