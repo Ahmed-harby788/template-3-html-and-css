@@ -1283,3 +1283,88 @@ color: var(--main-color);
     font-style: italic;
 }
 /* End stats  */
+/* Start Discount */
+.discount{
+    display: flex;
+}
+.discount .image{
+    background-image: url(../images/discount-background1.jpg);
+    background-size: cover;
+    max-width: 50%;
+    position: relative;
+}
+.discount .image::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(23 135 224 / 95%);
+}
+.discount .image .content{
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.discount .image .content h2{
+    font-size: 40px;
+}
+.discount .image .content p{
+    font-size: 20px;
+    padding: 20px 30px;
+}
+.discount .image .content img{
+    width: 300px;
+    max-width: 100%;
+}
+.discount .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 50px;
+}
+.discount .form .info{
+    text-align: center;
+    padding: 0 20px;
+}
+.discount .form .info h2{
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.discount .form .info form{
+    display: flex;
+    flex-direction: column;
+}
+.discount form .input{
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+}
+.discount form .input:focus{
+    outline: none;
+}
+.discount form textarea.input {
+    height: 200px;
+}
+.discount .info form input[type="submit"]:hover{
+    background-color: var(--main-color-alt);
+}
+.discount .info form input[type="submit"]{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+/* End Discount */
